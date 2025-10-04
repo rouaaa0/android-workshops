@@ -59,14 +59,26 @@ fun SignUpScreen(navController: NavHostController) {
             .padding(24.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-
+/*
         // Back Arrow
         IconButton(
             onClick = { navController.popBackStack() },
             modifier = Modifier.align(Alignment.Start)
         ) {
             Icon(Icons.Default.ArrowBack, contentDescription = "Back")
+        }*/
+        // Back Arrow
+        IconButton(
+            onClick = { navController.popBackStack() }, // Retour au login
+            modifier = Modifier.align(Alignment.Start)
+        ) {
+            Icon(
+                imageVector = Icons.Default.ArrowBack,
+                contentDescription = "Back",
+                tint = MaterialTheme.colorScheme.onBackground // ← couleur adaptée au thème clair/sombre
+            )
         }
+
 
         Spacer(modifier = Modifier.height(16.dp))
 

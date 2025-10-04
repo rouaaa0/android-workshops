@@ -12,6 +12,7 @@ import com.example.gamerapp.ui.screens.OTPValidationScreen
 import com.example.gamerapp.ui.screens.ResetPasswordScreen
 import com.example.gamerapp.ui.screens.SignUpScreen
 import com.example.gamerapp.ui.screens.SplashScreen
+import com.example.gamerapp.ui.theme.activities.HomeScreen
 
 @Composable
 fun NavGraph(navController: NavHostController) {
@@ -41,9 +42,13 @@ fun NavGraph(navController: NavHostController) {
             ResetPasswordScreen(navController)
         }
 
-        // 🔥 Ajout de la route SignUp
         composable("signup") {
             SignUpScreen(navController)
+        }
+
+        // 🏠 Home route qui charge HomeScreen avec BottomNav (News, Store, Profile)
+        composable("home") {
+            HomeScreen()
         }
     }
 }
